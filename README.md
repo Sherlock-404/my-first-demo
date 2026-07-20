@@ -8,10 +8,10 @@
 - GitHub SSH连接
 - 提交与推送代码
 - 修改文件并同步
+  
 ## Dev Branch Test
 
 这是我在 dev 分支添加的内容。
-
 
 这是main分支修改
 
@@ -21,3 +21,6 @@
 ## Author
 
 Beno1-Debug
+
+新增git笔记(待完善)
+新增linux 笔记(待完善)
