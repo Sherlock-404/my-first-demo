@@ -16,10 +16,6 @@ Git 是一个**版本控制工具**。
 * 回退错误修改
 * 多人协作开发
 
-简单理解：
-
-> Git 就像代码的“时间机器”。
-
 例如：
 
 ```text
@@ -102,8 +98,6 @@ git config --list
 SSH 是一种安全连接方式。
 
 作用：
-
-让你的电脑：
 
 ```text
 电脑
@@ -224,12 +218,6 @@ GitHub
 ```bash
 git status
 ```
-
-作用为查看：
-
-* 新文件
-* 修改文件
-* 是否需要提交
 ---
 
 ## 2. 添加文件
@@ -240,19 +228,8 @@ git status
 git add .
 ```
 
-作用是把文件放入：
+作用是把文件放入暂存区（staging area）
 
-> 暂存区（staging area）
-
-流程：
-
-```text
-文件
- ↓
-git add
- ↓
-暂存区
-```
 
 ---
 
@@ -264,19 +241,7 @@ git add
 git commit -m "说明"
 ```
 
-作用：
-
-创建一个版本记录。
-
-例如：
-
-```bash
-git commit -m "添加hello.py"
-```
-
-意思：
-
-保存这一次修改。
+作用：创建一个版本记录。
 
 ---
 
@@ -297,7 +262,7 @@ git push
 ---
 
 # 七、远程仓库连接
-
+连接本地仓库到远程仓库
 
 添加 GitHub 地址：
 
@@ -309,26 +274,6 @@ git remote add origin 仓库地址
 
 ```bash
 git remote -v
-```
-
-例如：
-
-```text
-origin git@github.com:Beno1-Debug/my-first-demo.git
-```
-
-含义：
-
-本地仓库：
-
-```text
-my-first-demo
-```
-
-连接：
-
-```text
-GitHub仓库
 ```
 
 ---
@@ -392,8 +337,6 @@ git push
 ```bash
 git log --oneline
 ```
-
-
 ---
 
 ## 查看修改内容
@@ -404,11 +347,7 @@ git log --oneline
 git diff
 ```
 
-作用：
-
-查看：
-
-> 修改但还没有提交的内容
+作用：查看修改但还没有提交的内容
 
 ---
 
@@ -426,25 +365,6 @@ origin
 git remote -v
 ```
 
-例如：
-
-```text
-origin git@github.com:Beno1-Debug/my-first-demo.git (fetch)
-
-origin git@github.com:Beno1-Debug/my-first-demo.git (push)
-```
-
-含义：
-
-当前项目连接：
-
-```text
-本地项目
-    |
-    ↓
-GitHub/my-first-demo
-```
-
 ---
 
 ## 添加远程仓库
@@ -453,12 +373,6 @@ GitHub/my-first-demo
 
 ```bash
 git remote add origin 仓库地址
-```
-
-例如：
-
-```bash
-git remote add origin git@github.com:Beno1-Debug/test.git
 ```
 
 ---
@@ -472,8 +386,6 @@ git remote remove origin
 ```
 
 作用：
-
-删除：
 
 ```text
 本地项目
@@ -509,9 +421,7 @@ git remote add origin 新地址
 
 # 十二、什么时候用 clone？
 
-如果：
-
-> GitHub 已经存在项目
+如果GitHub 已经存在项目
 
 ```bash
 git clone 仓库地址
@@ -541,9 +451,7 @@ git push
 
 ## 一、分支的作用
 
-分支用于：
-
-> 在不影响主代码的情况下，独立开发新功能。
+分支用于在不影响主代码的情况下，独立开发新功能。
 
 ---
 
@@ -596,7 +504,7 @@ git switch -c dev
 作用：
 
 把一个分支的代码合并到当前分支。
-## 一定要在main分支执行合并
+* 一定要在main分支执行合并 
 例如：
 
 现在：
@@ -721,19 +629,7 @@ git restore --staged 文件名
 
 ## 作用
 
-处理：
-
-> 已经 commit，但是想撤销
-
-例如：
-
-提交历史：
-
-```
-A —— B —— C
-```
-
-想删除 C：
+处理已经 commit，但是想撤销的修改
 
 # reset 三种模式
 
@@ -794,24 +690,7 @@ git reset --hard HEAD~1
 # 四、HEAD 的含义
 
 HEAD表示当前所在版本
-
-例如：
-
-```
-A —— B —— C
-          ↑
-         HEAD
-```
-
-表示当前在 C。
-
----
-
 HEAD~1表示上一个版本
-
----
-
-HEAD~2表示前两个版本。
 
 ---
 
